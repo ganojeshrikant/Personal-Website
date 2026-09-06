@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shrikant Ganoje — SAP Commissions &amp; Advanced Workflow Developer</title>
+<meta name="description" content="Shrikant Ganoje — Software Developer III specializing in SAP Commissions and SAP Advanced Workflow engineering. Based in Toronto, Canada.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2314213D'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23F4F0E6' text-anchor='middle'%3ESG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FAF9F6;
+    --bg-alt: #F2ECDC;
+    --ink: #1E2430;
+    --navy: #14213D;
+    --navy-deep: #0D1730;
+    --cream: #F4F0E4;
+    --slate: #5B6472;
+    --brass: #8E6A34;
+    --brass-light: #C9A05C;
+    --line: #DEDAD0;
+    --max: 920px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Source Serif 4', Georgia, serif;
+    color: var(--navy);
+    margin: 0;
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--brass);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s ease;
+  }
+  a:hover, a:focus-visible { border-bottom-color: var(--brass); }
+
+  :focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  .masthead-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--brass) 0%, var(--brass-light) 100%);
+  }
+
+  /* Nav */
+  header.site-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 249, 246, 0.94);
+    border-bottom: 1px solid var(--line);
+    z-index: 10;
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 18px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .nav-name {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--navy);
+    font-weight: 600;
+  }
+  .nav-links { display: flex; gap: 28px; flex-wrap: wrap; }
+  .nav-links a {
+    color: var(--slate);
+    font-size: 0.94rem;
+    border-bottom: 1px solid transparent;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible { color: var(--navy); border-bottom-color: var(--brass); }
+
+  /* Hero */
+  .hero-band {
+    background: var(--navy);
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
+    border-top: none;
+    padding: 0;
+  }
+  .hero {
+    padding: 76px 0 60px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 52px;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--cream);
+  }
+  .hero .role {
+    margin-top: 14px;
+    font-size: 1.15rem;
+    color: #C7CCD8;
+    max-width: 46ch;
+  }
+  .hero-anim > * {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: rise 0.6s ease forwards;
+  }
+  .hero-anim > *:nth-child(1) { animation-delay: 0.05s; }
+  .hero-anim > *:nth-child(2) { animation-delay: 0.2s; }
+  @keyframes rise {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-photo {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: rise 0.7s ease forwards;
+    animation-delay: 0.15s;
+    justify-self: center;
+  }
+  .hero-photo img {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    border: 2px solid var(--brass-light);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  }
+
+  .facts {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(244, 240, 228, 0.18);
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: rise 0.6s ease forwards;
+    animation-delay: 0.35s;
+    grid-column: 1 / -1;
+  }
+  .fact dt {
+    font-size: 0.82rem;
+    color: #9AA3B5;
+    margin-bottom: 2px;
+  }
+  .fact dd {
+    margin: 0;
+    font-size: 1.02rem;
+    color: var(--cream);
+  }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+  }
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+  }
+
+  .about p {
+    max-width: 66ch;
+    font-size: 1.05rem;
+  }
+
+  /* Experience & Education timelines */
+  .entry {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .entry:first-of-type { border-top: none; padding-top: 0; }
+  .entry .when {
+    color: var(--brass);
+    font-size: 0.92rem;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding-top: 2px;
+  }
+  .entry h3 {
+    font-size: 1.15rem;
+    margin-bottom: 2px;
+  }
+  .entry .place {
+    color: var(--slate);
+    font-size: 0.96rem;
+    margin-bottom: 10px;
+  }
+  .entry p { margin: 0; max-width: 62ch; }
+
+  /* Skills */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 40px;
+  }
+  .skill-cat {
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+  .skill-cat:nth-child(1), .skill-cat:nth-child(2) { border-top: none; padding-top: 0; }
+  .skill-cat h3 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .skill-cat p {
+    margin: 0;
+    color: var(--slate);
+    font-size: 0.98rem;
+  }
+
+  /* Contact */
+  .contact-band {
+    background: var(--navy);
+    margin-top: 0;
+    border-top: none;
+  }
+  .contact-band h2 { color: var(--cream); }
+  .contact-band p { max-width: 56ch; color: #C7CCD8; }
+  .contact p { max-width: 56ch; }
+  .contact-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .contact-links a {
+    font-size: 1.02rem;
+    color: var(--cream);
+    border-bottom: 1px solid var(--brass-light);
+  }
+  .contact-links a:hover, .contact-links a:focus-visible {
+    color: var(--brass-light);
+  }
+
+  .bg-alt { background: var(--bg-alt); }
+
+  footer {
+    background: var(--navy-deep);
+    padding: 22px 0;
+    color: #8991A3;
+    font-size: 0.85rem;
+    border-top: none;
+  }
+
+  @media (max-width: 680px) {
+    .hero { grid-template-columns: 1fr; gap: 28px; padding: 48px 0 44px; text-align: center; }
+    .hero-anim { order: 1; }
+    .hero-photo { order: 0; }
+    .hero .role { margin-left: auto; margin-right: auto; }
+    .facts { justify-content: center; text-align: left; }
+    .entry { grid-template-columns: 1fr; gap: 6px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .skill-cat:nth-child(2) { border-top: 1px solid var(--line); padding-top: 18px; }
+    .nav-links { gap: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead-bar"></div>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <span class="nav-name">Shrikant Ganoje</span>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero-band">
+  <div class="wrap hero">
+    <div class="hero-anim">
+      <h1>Shrikant Ganoje</h1>
+      <p class="role">Software Developer III specializing in SAP Commissions and SAP Advanced Workflow engineering — the systems enterprises rely on to calculate incentive compensation correctly and on time.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="headshot.jpg" alt="Portrait of Shrikant Ganoje" width="280" height="350">
+    </div>
+    <dl class="facts">
+      <div class="fact"><dt>Location</dt><dd>Toronto, Canada</dd></div>
+      <div class="fact"><dt>Focus</dt><dd>SAP Commissions &amp; Advanced Workflow</dd></div>
+      <div class="fact"><dt>Currently at</dt><dd>Charter Communications</dd></div>
+    </dl>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>I build and maintain the workflow logic behind enterprise incentive compensation — the scripts, integrations, and data pipelines that determine how commissions get calculated and paid. My background bridges finance and engineering: an MBA in Finance from Brock University shapes how I think about compensation structures, and a B.E. in Computer Engineering from Savitribai Phule Pune University is what lets me build the systems that run them.</p>
+    <p>I'm currently based in Toronto, developing SAP Commissions Advanced Workflow solutions for Charter Communications.</p>
+  </section>
+
+  <section id="experience" class="bg-alt">
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="when">2023 — Present</div>
+      <div>
+        <h3>Charter Communications Inc.</h3>
+        <div class="place">Software Developer III · Toronto, Canada</div>
+        <p>Develop SAP Commissions Advanced Workflow scripts for enterprise incentive compensation processing — Groovy-based form event, scheduled, async, and workflow action scripts; SAP HANA SQLScript and PL/SQL for quota and payment data; RESTful API integrations; and custom table operations supporting commission calculation and case management.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2019 — 2022</div>
+      <div>
+        <h3>OpenSymmetry Inc.</h3>
+        <div class="place">ICM Consultant · Pune, India</div>
+        <p>Delivered Incentive Compensation Management consulting on SAP Commissions (Callidus) implementations, supporting configuration, scripting, and client delivery for enterprise compensation systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <h3>Platforms</h3>
+        <p>SAP Commissions (Callidus), SAP Advanced Workflow</p>
+      </div>
+      <div class="skill-cat">
+        <h3>Scripting &amp; languages</h3>
+        <p>Groovy, SQL, PL/SQL</p>
+      </div>
+      <div class="skill-cat">
+        <h3>Data &amp; integration</h3>
+        <p>SAP HANA SQLScript, RESTful APIs, custom table operations</p>
+      </div>
+      <div class="skill-cat">
+        <h3>Tools</h3>
+        <p>Git, GitLab</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="bg-alt">
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="when">2022 — 2024</div>
+      <div>
+        <h3>Brock University</h3>
+        <div class="place">MBA, Finance</div>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2015 — 2019</div>
+      <div>
+        <h3>Savitribai Phule Pune University</h3>
+        <div class="place">B.E., Computer Engineering</div>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<section id="contact" class="contact-band">
+  <div class="wrap contact">
+    <h2>Contact</h2>
+    <p>I'm glad to connect with fellow SAP Commissions practitioners, compensation technology teams, and anyone working in this space.</p>
+    <div class="contact-links">
+      <a href="mailto:ganojeshrikant@gmail.com">ganojeshrikant@gmail.com</a>
+      <a href="https://www.linkedin.com/in/shrikantganoje/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="year"></span> Shrikant Ganoje</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
